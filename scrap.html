@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrap</title>
+</head>
+<body>
+<script type="text/javascript">
+	var gplay = require('google-play-scraper');
+ 
+gplay.reviews({
+  appId: 'com.mojang.minecraftpe',
+  page: 0,
+  sort: gplay.sort.RATING
+}).then(function(apps){
+  console.log('Retrieved ' + apps.length + ' reviews!');
+}).catch(function(e){
+  console.log('There was an error fetching the reviews!');
+});
+</script>
+
+</body>
+</html>
+
